@@ -30,7 +30,6 @@ namespace ShopVik.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             System.Windows.Forms.Label loginLabel;
             System.Windows.Forms.Label passLabel;
             System.Windows.Forms.Label firstnameLabel;
@@ -39,32 +38,25 @@ namespace ShopVik.Forms
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label statusLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.shopDataSet = new ShopVik.shopDataSet();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter = new ShopVik.shopDataSetTableAdapters.AccountsTableAdapter();
             this.tableAdapterManager = new ShopVik.shopDataSetTableAdapters.TableAdapterManager();
             this.accountsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.accountsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.accountsDataGridView = new System.Windows.Forms.DataGridView();
-            this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.passTextBox = new System.Windows.Forms.TextBox();
-            this.firstnameTextBox = new System.Windows.Forms.TextBox();
-            this.lastnameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.cityTextBox = new System.Windows.Forms.TextBox();
-            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +66,14 @@ namespace ShopVik.Forms
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.passTextBox = new System.Windows.Forms.TextBox();
+            this.firstnameTextBox = new System.Windows.Forms.TextBox();
+            this.lastnameTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             loginLabel = new System.Windows.Forms.Label();
             passLabel = new System.Windows.Forms.Label();
             firstnameLabel = new System.Windows.Forms.Label();
@@ -88,6 +88,78 @@ namespace ShopVik.Forms
             this.accountsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // loginLabel
+            // 
+            loginLabel.AutoSize = true;
+            loginLabel.Location = new System.Drawing.Point(61, 305);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new System.Drawing.Size(47, 17);
+            loginLabel.TabIndex = 2;
+            loginLabel.Text = "Login:";
+            // 
+            // passLabel
+            // 
+            passLabel.AutoSize = true;
+            passLabel.Location = new System.Drawing.Point(267, 306);
+            passLabel.Name = "passLabel";
+            passLabel.Size = new System.Drawing.Size(43, 17);
+            passLabel.TabIndex = 4;
+            passLabel.Text = "Pass:";
+            // 
+            // firstnameLabel
+            // 
+            firstnameLabel.AutoSize = true;
+            firstnameLabel.Location = new System.Drawing.Point(442, 308);
+            firstnameLabel.Name = "firstnameLabel";
+            firstnameLabel.Size = new System.Drawing.Size(74, 17);
+            firstnameLabel.TabIndex = 6;
+            firstnameLabel.Text = "Firstname:";
+            // 
+            // lastnameLabel
+            // 
+            lastnameLabel.AutoSize = true;
+            lastnameLabel.Location = new System.Drawing.Point(654, 310);
+            lastnameLabel.Name = "lastnameLabel";
+            lastnameLabel.Size = new System.Drawing.Size(74, 17);
+            lastnameLabel.TabIndex = 8;
+            lastnameLabel.Text = "Lastname:";
+            // 
+            // phoneNumberLabel
+            // 
+            phoneNumberLabel.AutoSize = true;
+            phoneNumberLabel.Location = new System.Drawing.Point(855, 310);
+            phoneNumberLabel.Name = "phoneNumberLabel";
+            phoneNumberLabel.Size = new System.Drawing.Size(107, 17);
+            phoneNumberLabel.TabIndex = 10;
+            phoneNumberLabel.Text = "Phone Number:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(28, 339);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(46, 17);
+            emailLabel.TabIndex = 12;
+            emailLabel.Text = "Email:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(260, 344);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(35, 17);
+            cityLabel.TabIndex = 14;
+            cityLabel.Text = "City:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(487, 341);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(52, 17);
+            statusLabel.TabIndex = 16;
+            statusLabel.Text = "Status:";
             // 
             // shopDataSet
             // 
@@ -137,9 +209,34 @@ namespace ShopVik.Forms
             this.accountsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.accountsBindingNavigator.Name = "accountsBindingNavigator";
             this.accountsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.accountsBindingNavigator.Size = new System.Drawing.Size(1088, 27);
+            this.accountsBindingNavigator.Size = new System.Drawing.Size(1088, 31);
             this.accountsBindingNavigator.TabIndex = 0;
             this.accountsBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 28);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -147,7 +244,7 @@ namespace ShopVik.Forms
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -156,34 +253,28 @@ namespace ShopVik.Forms
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 20);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -191,7 +282,7 @@ namespace ShopVik.Forms
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -200,38 +291,20 @@ namespace ShopVik.Forms
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // accountsBindingNavigatorSaveItem
             // 
             this.accountsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.accountsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("accountsBindingNavigatorSaveItem.Image")));
             this.accountsBindingNavigatorSaveItem.Name = "accountsBindingNavigatorSaveItem";
-            this.accountsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.accountsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.accountsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.accountsBindingNavigatorSaveItem.Click += new System.EventHandler(this.accountsBindingNavigatorSaveItem_Click_1);
             // 
@@ -256,142 +329,6 @@ namespace ShopVik.Forms
             this.accountsDataGridView.RowTemplate.Height = 24;
             this.accountsDataGridView.Size = new System.Drawing.Size(1000, 220);
             this.accountsDataGridView.TabIndex = 1;
-            // 
-            // loginLabel
-            // 
-            loginLabel.AutoSize = true;
-            loginLabel.Location = new System.Drawing.Point(61, 305);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new System.Drawing.Size(47, 17);
-            loginLabel.TabIndex = 2;
-            loginLabel.Text = "Login:";
-            // 
-            // loginTextBox
-            // 
-            this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Login", true));
-            this.loginTextBox.Location = new System.Drawing.Point(114, 302);
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(100, 22);
-            this.loginTextBox.TabIndex = 3;
-            // 
-            // passLabel
-            // 
-            passLabel.AutoSize = true;
-            passLabel.Location = new System.Drawing.Point(267, 306);
-            passLabel.Name = "passLabel";
-            passLabel.Size = new System.Drawing.Size(43, 17);
-            passLabel.TabIndex = 4;
-            passLabel.Text = "Pass:";
-            // 
-            // passTextBox
-            // 
-            this.passTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Pass", true));
-            this.passTextBox.Location = new System.Drawing.Point(316, 303);
-            this.passTextBox.Name = "passTextBox";
-            this.passTextBox.Size = new System.Drawing.Size(100, 22);
-            this.passTextBox.TabIndex = 5;
-            // 
-            // firstnameLabel
-            // 
-            firstnameLabel.AutoSize = true;
-            firstnameLabel.Location = new System.Drawing.Point(442, 308);
-            firstnameLabel.Name = "firstnameLabel";
-            firstnameLabel.Size = new System.Drawing.Size(74, 17);
-            firstnameLabel.TabIndex = 6;
-            firstnameLabel.Text = "Firstname:";
-            // 
-            // firstnameTextBox
-            // 
-            this.firstnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Firstname", true));
-            this.firstnameTextBox.Location = new System.Drawing.Point(522, 305);
-            this.firstnameTextBox.Name = "firstnameTextBox";
-            this.firstnameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.firstnameTextBox.TabIndex = 7;
-            // 
-            // lastnameLabel
-            // 
-            lastnameLabel.AutoSize = true;
-            lastnameLabel.Location = new System.Drawing.Point(654, 310);
-            lastnameLabel.Name = "lastnameLabel";
-            lastnameLabel.Size = new System.Drawing.Size(74, 17);
-            lastnameLabel.TabIndex = 8;
-            lastnameLabel.Text = "Lastname:";
-            // 
-            // lastnameTextBox
-            // 
-            this.lastnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Lastname", true));
-            this.lastnameTextBox.Location = new System.Drawing.Point(734, 307);
-            this.lastnameTextBox.Name = "lastnameTextBox";
-            this.lastnameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.lastnameTextBox.TabIndex = 9;
-            // 
-            // phoneNumberLabel
-            // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(855, 310);
-            phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(107, 17);
-            phoneNumberLabel.TabIndex = 10;
-            phoneNumberLabel.Text = "Phone Number:";
-            // 
-            // phoneNumberTextBox
-            // 
-            this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(968, 307);
-            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(100, 22);
-            this.phoneNumberTextBox.TabIndex = 11;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(28, 339);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(46, 17);
-            emailLabel.TabIndex = 12;
-            emailLabel.Text = "Email:";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(80, 336);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 22);
-            this.emailTextBox.TabIndex = 13;
-            // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(260, 344);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(35, 17);
-            cityLabel.TabIndex = 14;
-            cityLabel.Text = "City:";
-            // 
-            // cityTextBox
-            // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "City", true));
-            this.cityTextBox.Location = new System.Drawing.Point(301, 341);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(100, 22);
-            this.cityTextBox.TabIndex = 15;
-            // 
-            // statusLabel
-            // 
-            statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(487, 341);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(52, 17);
-            statusLabel.TabIndex = 16;
-            statusLabel.Text = "Status:";
-            // 
-            // statusTextBox
-            // 
-            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Status", true));
-            this.statusTextBox.Location = new System.Drawing.Point(545, 338);
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(100, 22);
-            this.statusTextBox.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -466,6 +403,70 @@ namespace ShopVik.Forms
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // loginTextBox
+            // 
+            this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Login", true));
+            this.loginTextBox.Location = new System.Drawing.Point(114, 302);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(100, 22);
+            this.loginTextBox.TabIndex = 3;
+            // 
+            // passTextBox
+            // 
+            this.passTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Pass", true));
+            this.passTextBox.Location = new System.Drawing.Point(316, 303);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(100, 22);
+            this.passTextBox.TabIndex = 5;
+            // 
+            // firstnameTextBox
+            // 
+            this.firstnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Firstname", true));
+            this.firstnameTextBox.Location = new System.Drawing.Point(522, 305);
+            this.firstnameTextBox.Name = "firstnameTextBox";
+            this.firstnameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.firstnameTextBox.TabIndex = 7;
+            // 
+            // lastnameTextBox
+            // 
+            this.lastnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Lastname", true));
+            this.lastnameTextBox.Location = new System.Drawing.Point(734, 307);
+            this.lastnameTextBox.Name = "lastnameTextBox";
+            this.lastnameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.lastnameTextBox.TabIndex = 9;
+            // 
+            // phoneNumberTextBox
+            // 
+            this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "PhoneNumber", true));
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(968, 307);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneNumberTextBox.TabIndex = 11;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(80, 336);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(100, 22);
+            this.emailTextBox.TabIndex = 13;
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "City", true));
+            this.cityTextBox.Location = new System.Drawing.Point(301, 341);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(100, 22);
+            this.cityTextBox.TabIndex = 15;
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountsBindingSource, "Status", true));
+            this.statusTextBox.Location = new System.Drawing.Point(545, 338);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(100, 22);
+            this.statusTextBox.TabIndex = 17;
             // 
             // Form5
             // 

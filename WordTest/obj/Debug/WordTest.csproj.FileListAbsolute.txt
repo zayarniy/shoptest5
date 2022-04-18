@@ -1,0 +1,10 @@
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\bin\Debug\WordTest.exe.config
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\bin\Debug\WordTest.exe
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\bin\Debug\WordTest.pdb
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.csproj.AssemblyReference.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.Form1.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.Properties.Resources.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.csproj.GenerateResource.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.csproj.CoreCompileInputs.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.exe
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\WordTest\obj\Debug\WordTest.pdb

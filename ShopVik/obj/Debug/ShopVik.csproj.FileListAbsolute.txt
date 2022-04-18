@@ -39,3 +39,17 @@ C:\Users\Valery\Desktop\shoptest2 (3)\shoptest2\ShopVik\obj\Debug\ShopVik.exe
 C:\Users\Valery\Desktop\shoptest2 (3)\shoptest2\ShopVik\obj\Debug\ShopVik.pdb
 C:\Users\Valery\Desktop\shoptest2 (3)\shoptest2\ShopVik\obj\Debug\ShopVik.csproj.AssemblyReference.cache
 C:\Users\Valery\Desktop\shoptest2 (3)\shoptest2\ShopVik\obj\Debug\ShopVik.Form4.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\bin\Debug\ShopVik.exe.config
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\bin\Debug\ShopVik.exe
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\bin\Debug\ShopVik.pdb
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.csproj.AssemblyReference.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Form1.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Form2.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Form3.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Form4.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Forms.Form5.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Properties.Resources.resources
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.csproj.GenerateResource.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.csproj.CoreCompileInputs.cache
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.exe
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.pdb

@@ -34,7 +34,6 @@ namespace ShopVik
             this.Lastname = new System.Windows.Forms.Label();
             this.btnRegistration = new System.Windows.Forms.Button();
             this.tbFirstName = new System.Windows.Forms.TextBox();
-            this.tbPhone = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +42,11 @@ namespace ShopVik
             this.tbPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbPass2 = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbCity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // Firstname
@@ -94,14 +94,6 @@ namespace ShopVik
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(125, 22);
             this.tbFirstName.TabIndex = 0;
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(225, 103);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(125, 22);
-            this.tbPhone.TabIndex = 2;
             // 
             // tbLastName
             // 
@@ -172,14 +164,6 @@ namespace ShopVik
             this.tbPass2.Size = new System.Drawing.Size(125, 22);
             this.tbPass2.TabIndex = 7;
             // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(225, 138);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(125, 22);
-            this.tbEmail.TabIndex = 3;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -207,15 +191,31 @@ namespace ShopVik
             this.label6.Text = "город";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // mtbPhone
+            // 
+            this.mtbPhone.Location = new System.Drawing.Point(225, 106);
+            this.mtbPhone.Mask = "+9(999) 000-00-00";
+            this.mtbPhone.Name = "mtbPhone";
+            this.mtbPhone.Size = new System.Drawing.Size(125, 22);
+            this.mtbPhone.TabIndex = 18;
+            // 
+            // mtbEmail
+            // 
+            this.mtbEmail.Location = new System.Drawing.Point(225, 138);
+            this.mtbEmail.Name = "mtbEmail";
+            this.mtbEmail.Size = new System.Drawing.Size(125, 22);
+            this.mtbEmail.TabIndex = 19;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 360);
+            this.Controls.Add(this.mtbEmail);
+            this.Controls.Add(this.mtbPhone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbCity);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbPass2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbPass);
@@ -224,7 +224,6 @@ namespace ShopVik
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbLastName);
-            this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.Lastname);
@@ -246,7 +245,6 @@ namespace ShopVik
         private System.Windows.Forms.Label Lastname;
         private System.Windows.Forms.Button btnRegistration;
         private System.Windows.Forms.TextBox tbFirstName;
-        private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -255,9 +253,10 @@ namespace ShopVik
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbPass2;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbCity;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox mtbPhone;
+        private System.Windows.Forms.MaskedTextBox mtbEmail;
     }
 }
