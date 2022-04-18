@@ -53,3 +53,4 @@ C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.c
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.csproj.CoreCompileInputs.cache
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.exe
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.pdb
+C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\ShopVik\obj\Debug\ShopVik.Forms.Form6.resources
