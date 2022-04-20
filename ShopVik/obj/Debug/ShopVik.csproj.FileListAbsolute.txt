@@ -69,3 +69,4 @@ C:\Users\zaaza\Source\Repos\shoptest5\ShopVik\obj\Debug\ShopVik.csproj.GenerateR
 C:\Users\zaaza\Source\Repos\shoptest5\ShopVik\obj\Debug\ShopVik.csproj.CoreCompileInputs.cache
 C:\Users\zaaza\Source\Repos\shoptest5\ShopVik\obj\Debug\ShopVik.exe
 C:\Users\zaaza\Source\Repos\shoptest5\ShopVik\obj\Debug\ShopVik.pdb
+C:\Users\zaaza\source\repos\shoptest5\ShopVik\obj\Debug\ShopVik.csproj.SuggestedBindingRedirects.cache

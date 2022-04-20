@@ -30,5 +30,22 @@ namespace ShopVik.Forms
                 chart1.Series[0].Points.Add(list[i]);
             }
         }
+
+        private void btnBuildGraph_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable=Service.GetPurchase(monthCalendar1.SelectionStart,monthCalendar1.SelectionEnd);
+            PaintGraph(dataTable);
+        }
+
+        private void PaintGraph(DataTable dataTable)
+        {
+            chart1.Series[0].Points.Clear();
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(dataTable.Rows[i]["Sum"]);
+                chart1.Series[0].Points.AddXY(Convert.ToString(dataTable.Rows[i]["FullName"]), Convert.ToInt32(dataTable.Rows[i]["Sum"]));
+            }
+
+        }
     }
 }

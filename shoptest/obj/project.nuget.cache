@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/QIgO/TtrEGE8XbvmnSRVRTl8HQPLVUAkKiBSBAf4blqdwdMBHoqRAsSYbZubVm2F6NR+62T3xmO6QNiVloVrA==",
+  "dgSpecHash": "pNLsXOIMtlNPbzK7oH0GW22eVtrIVWubF8WCpXM6DYfUUUlWjytQjIexRUtG3y432dGPAdS65YA5w8qKC6T+yA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zaaza\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
+  "projectFilePath": "C:\\Users\\zaaza\\source\\repos\\shoptest5\\shoptest\\shoptest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zaaza\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\zaaza\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

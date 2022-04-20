@@ -65,16 +65,16 @@ namespace ShopVik
                 Microsoft.Office.Interop.Word.Document document = winword.Documents.Add(ref missing, ref missing, ref missing, ref missing);
 
                 //Add header into the document  
-                foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
-                {
-                    //Get the header range and add the header details.  
-                    Microsoft.Office.Interop.Word.Range headerRange = section.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    headerRange.Fields.Add(headerRange, Microsoft.Office.Interop.Word.WdFieldType.wdFieldPage);
-                    headerRange.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                    headerRange.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlue;
-                    headerRange.Font.Size = 10;
-                    headerRange.Text = "Header text goes here";
-                }
+                //foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
+                //{
+                //    //Get the header range and add the header details.  
+                //    Microsoft.Office.Interop.Word.Range headerRange = section.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                //    headerRange.Fields.Add(headerRange, Microsoft.Office.Interop.Word.WdFieldType.wdFieldPage);
+                //    headerRange.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                //    headerRange.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlue;
+                //    headerRange.Font.Size = 10;
+                //    headerRange.Text = "Header text goes here";
+                //}
 
                 ////Add the footers into the document  
                 //foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
@@ -240,6 +240,50 @@ namespace ShopVik
             return true;
         }
 
+        public static System.Data.DataTable GetPurchase(DateTime start, DateTime finish)
+        {            
+            OleDbConnection connection = null;
+            System.Data.DataTable dataTable = new System.Data.DataTable();
+            try
+            {
+                connection = new OleDbConnection(connectionString); //создание подключения к бд
+                connection.Open();
+                //string query = "Select * from Purchases where [Date]>='" + start.ToString("yyyy-MM-dd HH:mm:ss") + "' and [Date]<='" + finish.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+                string query = "Select * from Purchases";
+                OleDbCommand command = new OleDbCommand(query, connection);//Create command
+                System.Diagnostics.Debug.WriteLine(query);
+                dataTable.Columns.Add("Date");
+                dataTable.Columns.Add("FullName");
+                dataTable.Columns.Add("Sum");
+
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    DateTime date = reader.GetDateTime(2);
+                    
+                    if (date>=start && date<=finish)
+                    {
+                        string fullName=reader.GetString(4);
+                        int sum=reader.GetInt32(3);
+                        dataTable.Rows.Add(date,fullName,sum);
+                    }
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection?.Close();
+            }
+
+
+            return dataTable;
+
+        }
 
         public class User
         {
