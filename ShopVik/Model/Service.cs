@@ -170,11 +170,12 @@ namespace ShopVik
                 {
                     var reader = command.ExecuteReader();
                     reader.Read();
+                    int id = (int)reader["Id"];
                     string lastName = (reader["Lastname"] is DBNull) ? "" : (string)reader["Lastname"];
                     string firstName = (reader["Firstname"] is DBNull) ? "" : (string)reader["Firstname"];
                     string phone = (reader["PhoneNumber"] is DBNull) ? "" : (string)reader["PhoneNumber"];
                     string email = (reader["Email"] is DBNull) ? "" : (string)reader["Email"];
-                    user = new User(lastName, firstName, phone, email);
+                    user = new User(id,lastName, firstName, phone, email);
 
                     status = (int)reader["Status"];
 
@@ -208,26 +209,51 @@ namespace ShopVik
             System.Diagnostics.Debug.WriteLine(query);
             command = new OleDbCommand(query, connection);//Create command
             n = command.ExecuteNonQuery();
+            query= "SELECT @@Identity";
+            command = new OleDbCommand(query, connection);//Get ID
+            int id = Convert.ToInt32(command.ExecuteScalar());
+            System.Diagnostics.Debug.WriteLine(id);
             connection.Close();
             result = "Пользователь " + login + " добавлен";
-            user = new User(lastName, firstName, phone, email);
+            user = new User(id, lastName, firstName, phone, email);
             return true;
         }
 
-
+        public static bool AddPurchase(User user,DateTime date, Receipt receipt)
+        {
+            try
+            {
+                OleDbConnection connection = new OleDbConnection(connectionString); //создание подключения к бд
+                connection.Open();
+                OleDbCommand command;
+                string query = $@"Insert into Purchases (UserID, [Date], [Sum], FullName) values ('{user.ID}','{date.ToString("yyyy-MM-dd HH:mm:ss")}','{receipt.Sum}','{user.LastName + " " + user.FirstName}')";
+                System.Diagnostics.Debug.WriteLine(query);
+                command = new OleDbCommand(query, connection);//Create command
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch(Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+                return false;
+            }
+            return true;
+        }
 
 
         public class User
         {
             //свойства
+            public int ID { get; private set; }
             public string LastName { get; private set; }//из друго класса можно читать, а записывать только внутри этого класса
             public string FirstName { get; private set; }
             public string Phone { get; private set; }
 
             public string Email { get; private set; }
 
-            public User(string LastName, string FirstName, string Phone, string Email)
+            public User(int Id, string LastName, string FirstName, string Phone, string Email)
             {
+                this.ID = Id;
                 this.LastName = LastName; ;
                 this.FirstName = FirstName;
                 this.Phone = Phone;

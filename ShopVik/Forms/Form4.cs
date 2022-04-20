@@ -15,8 +15,10 @@ namespace ShopVik
     public partial class Form4 : Form
     {
         DataTable cart = new DataTable();
+        DataTable purchases = new DataTable();
 
         BindingSource bsCart=new BindingSource();
+        BindingSource bsPurchases = new BindingSource();
         public Form4()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace ShopVik
             bsCart.DataSource = cart;
             dgvCart.DataSource = bsCart;
             bnCart.BindingSource = bsCart;
+            
            // cart.RowChanged += Cart_RowChanged;
            // bsCart.CurrentItemChanged += BsCart_CurrentItemChanged;
         }
@@ -70,11 +73,18 @@ namespace ShopVik
         private void btnGetCheck_Click(object sender, EventArgs e)
         {
             Service.Receipt receipt = new Service.Receipt(cart,Service.CurrentUser);
-            string filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\reciept.docx";
-            Service.CreateDocument(filename, receipt);
-            MessageBox.Show(filename + " успешно создан!");
-            System.Diagnostics.Process.Start(filename);
-            
+            if (Service.AddPurchase(Service.CurrentUser, monthCalendar1.SelectionStart, receipt))
+                MessageBox.Show("Покупка совершена");
+            else
+                MessageBox.Show("Ошибка...");
+            if (cbCheck.Checked)
+            {
+                string filename = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\reciept.docx";
+                Service.CreateDocument(filename, receipt);
+                MessageBox.Show(filename + " успешно создан!");
+                System.Diagnostics.Process.Start(filename);
+            }
+            //this.shopDataSet.Purchases.AddPurchasesRow
 
         }
 

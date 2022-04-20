@@ -8,3 +8,13 @@ C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\AccauntEditor\obj\Debug\Acc
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\AccauntEditor\obj\Debug\AccauntEditor.csproj.CoreCompileInputs.cache
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\AccauntEditor\obj\Debug\AccauntEditor.exe
 C:\Users\Valery\Desktop\shoptest2_20220413\shoptest2\AccauntEditor\obj\Debug\AccauntEditor.pdb
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\bin\Debug\AccauntEditor.exe.config
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\bin\Debug\AccauntEditor.exe
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\bin\Debug\AccauntEditor.pdb
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.csproj.AssemblyReference.cache
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.Form1.resources
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.Properties.Resources.resources
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.csproj.GenerateResource.cache
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.csproj.CoreCompileInputs.cache
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.exe
+C:\Users\zaaza\Source\Repos\shoptest5\AccauntEditor\obj\Debug\AccauntEditor.pdb

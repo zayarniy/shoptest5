@@ -53,6 +53,8 @@ namespace ShopVik
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.lblSum = new System.Windows.Forms.Label();
             this.btnGetCheck = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.cbCheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.shopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -79,6 +81,7 @@ namespace ShopVik
             this.tableAdapterManager.AccountsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ProductsTableAdapter = this.productsTableAdapter;
+            this.tableAdapterManager.PurchasesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ShopVik.shopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cbProducts
@@ -86,10 +89,10 @@ namespace ShopVik
             this.cbProducts.DataSource = this.productsBindingSource;
             this.cbProducts.DisplayMember = "NameP";
             this.cbProducts.FormattingEnabled = true;
-            this.cbProducts.Location = new System.Drawing.Point(12, 44);
-            this.cbProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbProducts.Location = new System.Drawing.Point(9, 36);
+            this.cbProducts.Margin = new System.Windows.Forms.Padding(2);
             this.cbProducts.Name = "cbProducts";
-            this.cbProducts.Size = new System.Drawing.Size(121, 24);
+            this.cbProducts.Size = new System.Drawing.Size(92, 21);
             this.cbProducts.TabIndex = 2;
             this.cbProducts.ValueMember = "Price";
             // 
@@ -111,19 +114,19 @@ namespace ShopVik
             "20",
             "50",
             "100"});
-            this.cbCount.Location = new System.Drawing.Point(12, 75);
-            this.cbCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCount.Location = new System.Drawing.Point(9, 61);
+            this.cbCount.Margin = new System.Windows.Forms.Padding(2);
             this.cbCount.Name = "cbCount";
-            this.cbCount.Size = new System.Drawing.Size(121, 24);
+            this.cbCount.Size = new System.Drawing.Size(92, 21);
             this.cbCount.TabIndex = 3;
             this.cbCount.Text = "0";
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(12, 105);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddProduct.Location = new System.Drawing.Point(9, 85);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
+            this.btnAddProduct.Size = new System.Drawing.Size(65, 19);
             this.btnAddProduct.TabIndex = 4;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
@@ -132,14 +135,14 @@ namespace ShopVik
             // dgvCart
             // 
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCart.Location = new System.Drawing.Point(264, 30);
-            this.dgvCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCart.Location = new System.Drawing.Point(198, 24);
+            this.dgvCart.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCart.MultiSelect = false;
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.ReadOnly = true;
             this.dgvCart.RowHeadersWidth = 51;
             this.dgvCart.RowTemplate.Height = 24;
-            this.dgvCart.Size = new System.Drawing.Size(507, 369);
+            this.dgvCart.Size = new System.Drawing.Size(380, 300);
             this.dgvCart.TabIndex = 5;
             // 
             // bnCart
@@ -167,7 +170,7 @@ namespace ShopVik
             this.bnCart.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bnCart.Name = "bnCart";
             this.bnCart.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bnCart.Size = new System.Drawing.Size(800, 31);
+            this.bnCart.Size = new System.Drawing.Size(600, 27);
             this.bnCart.TabIndex = 6;
             this.bnCart.Text = "bindingNavigator1";
             // 
@@ -177,14 +180,14 @@ namespace ShopVik
             this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
             this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
             // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(55, 28);
-            this.bindingNavigatorCountItem1.Text = "для {0}";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorDeleteItem1
@@ -193,7 +196,7 @@ namespace ShopVik
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem1.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem1
@@ -202,7 +205,7 @@ namespace ShopVik
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -211,13 +214,13 @@ namespace ShopVik
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -225,14 +228,14 @@ namespace ShopVik
             this.bindingNavigatorPositionItem1.AutoSize = false;
             this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(49, 27);
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -240,7 +243,7 @@ namespace ShopVik
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem1
@@ -249,39 +252,58 @@ namespace ShopVik
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // lblSum
             // 
             this.lblSum.AutoSize = true;
-            this.lblSum.Location = new System.Drawing.Point(733, 9);
+            this.lblSum.Location = new System.Drawing.Point(550, 7);
+            this.lblSum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSum.Name = "lblSum";
-            this.lblSum.Size = new System.Drawing.Size(16, 17);
+            this.lblSum.Size = new System.Drawing.Size(13, 13);
             this.lblSum.TabIndex = 7;
             this.lblSum.Text = "0";
             // 
             // btnGetCheck
             // 
-            this.btnGetCheck.Location = new System.Drawing.Point(12, 135);
-            this.btnGetCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGetCheck.Location = new System.Drawing.Point(9, 110);
+            this.btnGetCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetCheck.Name = "btnGetCheck";
-            this.btnGetCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnGetCheck.Size = new System.Drawing.Size(65, 19);
             this.btnGetCheck.TabIndex = 8;
-            this.btnGetCheck.Text = "Reciept";
+            this.btnGetCheck.Text = "Purchase";
             this.btnGetCheck.UseVisualStyleBackColor = true;
             this.btnGetCheck.Click += new System.EventHandler(this.btnGetCheck_Click);
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(9, 152);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 9;
+            // 
+            // cbCheck
+            // 
+            this.cbCheck.AutoSize = true;
+            this.cbCheck.Location = new System.Drawing.Point(9, 135);
+            this.cbCheck.Name = "cbCheck";
+            this.cbCheck.Size = new System.Drawing.Size(118, 17);
+            this.cbCheck.TabIndex = 10;
+            this.cbCheck.Text = "Формировать чек";
+            this.cbCheck.UseVisualStyleBackColor = true;
+            // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.cbCheck);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnGetCheck);
             this.Controls.Add(this.lblSum);
             this.Controls.Add(this.bnCart);
@@ -289,7 +311,7 @@ namespace ShopVik
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.cbCount);
             this.Controls.Add(this.cbProducts);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -328,5 +350,7 @@ namespace ShopVik
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
         private System.Windows.Forms.Label lblSum;
         private System.Windows.Forms.Button btnGetCheck;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.CheckBox cbCheck;
     }
 }
