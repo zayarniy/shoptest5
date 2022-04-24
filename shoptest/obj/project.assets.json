@@ -631,24 +631,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zaaza\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Sasha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zaaza\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
+      "projectUniqueName": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
       "projectName": "shoptest",
-      "projectPath": "C:\\Users\\zaaza\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
-      "packagesPath": "C:\\Users\\zaaza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zaaza\\Source\\Repos\\shoptest5\\shoptest\\obj\\",
+      "projectPath": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
+      "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zaaza\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -694,7 +689,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

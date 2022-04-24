@@ -17,7 +17,7 @@ namespace ShopVik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ShopVik.Forms.Form6());
+            Application.Run(new ShopVik.Forms.Form7());
         }
     }
 }
