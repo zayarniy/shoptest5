@@ -43,6 +43,7 @@ namespace ShopVik
             this.rbShop = new System.Windows.Forms.RadioButton();
             this.btnShowChars = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Label();
+            this.rbAnalis = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gbAdmin.SuspendLayout();
@@ -71,7 +72,7 @@ namespace ShopVik
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(361, 102);
-            this.tbLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLogin.Margin = new System.Windows.Forms.Padding(2);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(108, 20);
             this.tbLogin.TabIndex = 2;
@@ -81,7 +82,7 @@ namespace ShopVik
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(361, 128);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(108, 20);
             this.tbPassword.TabIndex = 3;
@@ -97,7 +98,7 @@ namespace ShopVik
             this.btnEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(211)))));
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnter.Location = new System.Drawing.Point(374, 161);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(94, 19);
             this.btnEnter.TabIndex = 4;
@@ -113,7 +114,7 @@ namespace ShopVik
             this.btnRegistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(211)))));
             this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistration.Location = new System.Drawing.Point(374, 184);
-            this.btnRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(94, 19);
             this.btnRegistration.TabIndex = 5;
@@ -126,7 +127,7 @@ namespace ShopVik
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(247)))), ((int)(((byte)(173)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(296, 37);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(172, 28);
             this.panel1.TabIndex = 7;
@@ -159,7 +160,7 @@ namespace ShopVik
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(512, 219);
             this.panel2.TabIndex = 8;
@@ -168,13 +169,14 @@ namespace ShopVik
             // 
             // gbAdmin
             // 
+            this.gbAdmin.Controls.Add(this.rbAnalis);
             this.gbAdmin.Controls.Add(this.rbUsers);
             this.gbAdmin.Controls.Add(this.rbShop);
             this.gbAdmin.Location = new System.Drawing.Point(127, 84);
-            this.gbAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.gbAdmin.Name = "gbAdmin";
-            this.gbAdmin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbAdmin.Size = new System.Drawing.Size(150, 81);
+            this.gbAdmin.Padding = new System.Windows.Forms.Padding(2);
+            this.gbAdmin.Size = new System.Drawing.Size(150, 96);
             this.gbAdmin.TabIndex = 13;
             this.gbAdmin.TabStop = false;
             this.gbAdmin.Visible = false;
@@ -184,11 +186,10 @@ namespace ShopVik
             this.rbUsers.AutoSize = true;
             this.rbUsers.Checked = true;
             this.rbUsers.Location = new System.Drawing.Point(5, 40);
-            this.rbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbUsers.Margin = new System.Windows.Forms.Padding(2);
             this.rbUsers.Name = "rbUsers";
             this.rbUsers.Size = new System.Drawing.Size(96, 17);
             this.rbUsers.TabIndex = 1;
-            this.rbUsers.TabStop = true;
             this.rbUsers.Text = "пользователи";
             this.rbUsers.UseVisualStyleBackColor = true;
             // 
@@ -196,18 +197,17 @@ namespace ShopVik
             // 
             this.rbShop.AutoSize = true;
             this.rbShop.Location = new System.Drawing.Point(5, 17);
-            this.rbShop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbShop.Margin = new System.Windows.Forms.Padding(2);
             this.rbShop.Name = "rbShop";
             this.rbShop.Size = new System.Drawing.Size(55, 17);
             this.rbShop.TabIndex = 0;
-            this.rbShop.TabStop = true;
             this.rbShop.Text = "склад";
             this.rbShop.UseVisualStyleBackColor = true;
             // 
             // btnShowChars
             // 
             this.btnShowChars.Location = new System.Drawing.Point(472, 128);
-            this.btnShowChars.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowChars.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowChars.Name = "btnShowChars";
             this.btnShowChars.Size = new System.Drawing.Size(22, 19);
             this.btnShowChars.TabIndex = 12;
@@ -232,6 +232,17 @@ namespace ShopVik
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
+            // rbAnalis
+            // 
+            this.rbAnalis.AutoSize = true;
+            this.rbAnalis.Location = new System.Drawing.Point(5, 61);
+            this.rbAnalis.Margin = new System.Windows.Forms.Padding(2);
+            this.rbAnalis.Name = "rbAnalis";
+            this.rbAnalis.Size = new System.Drawing.Size(61, 17);
+            this.rbAnalis.TabIndex = 2;
+            this.rbAnalis.Text = "анализ";
+            this.rbAnalis.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +250,7 @@ namespace ShopVik
             this.ClientSize = new System.Drawing.Size(513, 219);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -269,6 +280,7 @@ namespace ShopVik
         private System.Windows.Forms.GroupBox gbAdmin;
         private System.Windows.Forms.RadioButton rbUsers;
         private System.Windows.Forms.RadioButton rbShop;
+        private System.Windows.Forms.RadioButton rbAnalis;
     }
 }
 

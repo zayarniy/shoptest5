@@ -41,6 +41,13 @@ namespace ShopVik
                         form5.ShowDialog();
 
                     }
+                    if (rbAnalis.Checked)
+                    {
+                        ShopVik.Forms.Form7 form7 = new ShopVik.Forms.Form7();
+                        form7.ShowDialog();
+
+                    }
+
                     break;
                 case 1://User
                     Form4 form4 = new Form4();

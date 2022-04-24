@@ -44,7 +44,7 @@ namespace ShopVik
     class Service
     {
 
-        public static Service.User CurrentUser;
+        public static Service.User CurrentUser=new User(0,"Test","Test","111","mail@mail.ru");
         static public void CreateDocument(object filename, Receipt receipt)
         {
             try
@@ -238,6 +238,83 @@ namespace ShopVik
                 return false;
             }
             return true;
+        }
+
+        public static bool AddCartToDB(User user, DateTime date,System.Data.DataTable cart)
+        {
+            try
+            {
+                OleDbConnection connection = new OleDbConnection(connectionString); //создание подключения к бд
+                connection.Open();
+                OleDbCommand command;
+                for (int i = 0; i < cart.Rows.Count; i++)
+                {
+                    string item = Convert.ToString(cart.Rows[i]["Name"]);
+                    int count = Convert.ToInt32(cart.Rows[i]["Count"]);
+
+                    int price= Convert.ToInt32(cart.Rows[i]["Price"]);
+//                    string q="INSERT INTO Purchases2 ( Item, [Count], DatePurchase, UserID, PurchaseID, Price ) VALUES ('яйца', 0, '2022-04-24 13:21:54', 0, '637864033146237007', 10);"
+                    string query = $@"Insert into Purchases2 (Item, [Count], DatePurchase, UserID,PurchaseID,Price) values ('{item}',{count},'{date.ToString("yyyy-MM-dd HH:mm:ss")}',{user.ID},'{date.Ticks.ToString()}',{price})";
+                    System.Diagnostics.Debug.WriteLine(query);
+                    command = new OleDbCommand(query, connection);//Create command
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+                return false;
+            }
+            return true;
+
+        }
+
+
+        public static string GetMaxProduct(DateTime start, DateTime finish)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            OleDbConnection connection = null;
+            string productName = "";
+            System.Data.DataTable dataTable = new System.Data.DataTable();
+            try
+            {
+                connection = new OleDbConnection(connectionString); //создание подключения к бд
+                connection.Open();
+                //string query = "Select * from Purchases where [Date]>='" + start.ToString("yyyy-MM-dd HH:mm:ss") + "' and [Date]<='" + finish.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+                string query = "Select * from Purchases2";
+                OleDbCommand command = new OleDbCommand(query, connection);//Create command
+                System.Diagnostics.Debug.WriteLine(query);
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    DateTime date = reader.GetDateTime(3);
+
+                    if (date >= start && date <= finish)
+                    {
+                        string item = reader.GetString(1);
+                        int count = reader.GetInt32(2);
+                        if (dict.ContainsKey(item)) dict[item]+=count;
+                        else dict.Add(item, count);
+                    }
+                }
+                int max = -1;
+                foreach(var pair in dict)
+                    if (pair.Value>max)
+                    {
+                        max = pair.Value;
+                        productName = pair.Key;
+                    }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection?.Close();
+            }
+            return productName;
         }
 
         public static System.Data.DataTable GetPurchase(DateTime start, DateTime finish)

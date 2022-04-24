@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj": {}
+    "C:\\Users\\Sasha\\source\\repos\\shoptest5\\shoptest\\shoptest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj": {
+    "C:\\Users\\Sasha\\source\\repos\\shoptest5\\shoptest\\shoptest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
+        "projectUniqueName": "C:\\Users\\Sasha\\source\\repos\\shoptest5\\shoptest\\shoptest.csproj",
         "projectName": "shoptest",
-        "projectPath": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\shoptest.csproj",
+        "projectPath": "C:\\Users\\Sasha\\source\\repos\\shoptest5\\shoptest\\shoptest.csproj",
         "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sasha\\Source\\Repos\\shoptest5\\shoptest\\obj\\",
+        "outputPath": "C:\\Users\\Sasha\\source\\repos\\shoptest5\\shoptest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",

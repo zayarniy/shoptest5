@@ -31,22 +31,15 @@ namespace ShopVik.Forms
         {
             DataTable dataTable = Service.GetPurchase(dtpStart.Value, dtpFinish.Value);
             double sum = 0;
-            Dictionary<string, int> dict = new Dictionary<string, int>();
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
-                sum=sum+Convert.ToDouble(dataTable.Rows[i]["Sum"]);
-                string item = Convert.ToString(dataTable.Rows[i]["Item"]);
-                if (dict.ContainsKey(item))
-                    dict[item]++;
-                else
-                    dict.Add(item, 1);
-
-                //chart1.Series[0].Points.AddXY(Convert.ToString(dataTable.Rows[i]["FullName"]), Convert.ToInt32(dataTable.Rows[i]["Sum"]));
+                sum = sum + Convert.ToDouble(dataTable.Rows[i]["Sum"]);
             }
 
             double avg=sum/dataTable.Rows.Count;
             tbProfit.Text = sum.ToString();
             tbReceiptAvg.Text = avg.ToString();
+            tbItem.Text = Service.GetMaxProduct(dtpStart.Value, dtpFinish.Value);
             PaintGraph(dataTable);
         }
 

@@ -73,6 +73,7 @@ namespace ShopVik
         private void btnGetCheck_Click(object sender, EventArgs e)
         {
             Service.Receipt receipt = new Service.Receipt(cart,Service.CurrentUser);
+            Service.AddCartToDB(Service.CurrentUser, DateTime.Now, cart);
             if (Service.AddPurchase(Service.CurrentUser, monthCalendar1.SelectionStart, receipt))
                 MessageBox.Show("Покупка совершена");
             else
