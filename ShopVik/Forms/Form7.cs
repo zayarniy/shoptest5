@@ -49,8 +49,12 @@ namespace ShopVik.Forms
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 System.Diagnostics.Debug.WriteLine(dataTable.Rows[i]["Sum"]);
-                chart1.Series[0].Points.AddXY(Convert.ToString(dataTable.Rows[i]["FullName"]), Convert.ToInt32(dataTable.Rows[i]["Sum"]));
+                chart1.Series[0].Points.AddXY(Convert.ToDateTime(dataTable.Rows[i]["Date"]).ToString("yy-MM-dd"), Convert.ToInt32(dataTable.Rows[i]["Sum"]));
             }
+            //chart1.ChartAreas[0].AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
+            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = 90;
+
+
 
         }
     }

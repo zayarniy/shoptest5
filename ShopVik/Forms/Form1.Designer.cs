@@ -39,11 +39,11 @@ namespace ShopVik
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbAdmin = new System.Windows.Forms.GroupBox();
+            this.rbAnalis = new System.Windows.Forms.RadioButton();
             this.rbUsers = new System.Windows.Forms.RadioButton();
             this.rbShop = new System.Windows.Forms.RadioButton();
             this.btnShowChars = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Label();
-            this.rbAnalis = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gbAdmin.SuspendLayout();
@@ -76,7 +76,7 @@ namespace ShopVik
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(108, 20);
             this.tbLogin.TabIndex = 2;
-            this.tbLogin.Text = "1";
+            this.tbLogin.Text = "admin";
             this.tbLogin.TextChanged += new System.EventHandler(this.tbLogin_TextChanged);
             // 
             // tbPassword
@@ -86,7 +86,7 @@ namespace ShopVik
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(108, 20);
             this.tbPassword.TabIndex = 3;
-            this.tbPassword.Text = "1";
+            this.tbPassword.Text = "admin";
             this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
@@ -181,6 +181,17 @@ namespace ShopVik
             this.gbAdmin.TabStop = false;
             this.gbAdmin.Visible = false;
             // 
+            // rbAnalis
+            // 
+            this.rbAnalis.AutoSize = true;
+            this.rbAnalis.Location = new System.Drawing.Point(5, 61);
+            this.rbAnalis.Margin = new System.Windows.Forms.Padding(2);
+            this.rbAnalis.Name = "rbAnalis";
+            this.rbAnalis.Size = new System.Drawing.Size(61, 17);
+            this.rbAnalis.TabIndex = 2;
+            this.rbAnalis.Text = "анализ";
+            this.rbAnalis.UseVisualStyleBackColor = true;
+            // 
             // rbUsers
             // 
             this.rbUsers.AutoSize = true;
@@ -190,6 +201,7 @@ namespace ShopVik
             this.rbUsers.Name = "rbUsers";
             this.rbUsers.Size = new System.Drawing.Size(96, 17);
             this.rbUsers.TabIndex = 1;
+            this.rbUsers.TabStop = true;
             this.rbUsers.Text = "пользователи";
             this.rbUsers.UseVisualStyleBackColor = true;
             // 
@@ -231,17 +243,6 @@ namespace ShopVik
             this.closeButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.closeButton_MouseDown);
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
-            // 
-            // rbAnalis
-            // 
-            this.rbAnalis.AutoSize = true;
-            this.rbAnalis.Location = new System.Drawing.Point(5, 61);
-            this.rbAnalis.Margin = new System.Windows.Forms.Padding(2);
-            this.rbAnalis.Name = "rbAnalis";
-            this.rbAnalis.Size = new System.Drawing.Size(61, 17);
-            this.rbAnalis.TabIndex = 2;
-            this.rbAnalis.Text = "анализ";
-            this.rbAnalis.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
